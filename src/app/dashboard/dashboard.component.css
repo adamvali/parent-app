@@ -1,0 +1,62 @@
+/* dashboard.component.css */
+
+/* Container for the dashboard tiles */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Flexible columns */
+  gap: 20px;
+  padding: 30px;
+  justify-items: center; /* Centers tiles */
+}
+
+.tile {
+  background-color: #007acc;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tile h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.tile p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.tile-link {
+  background-color: #fff;
+  color: #007acc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tile-link:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+.tile:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
